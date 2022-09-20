@@ -1,0 +1,706 @@
+/* core */
+* {
+    box-sizing: border-box;
+    margin: 0px;
+}
+
+html {
+    min-height: 100vh;
+    font-family: sans-serif;
+    /* display: flex;
+    box-sizing: border-box; */
+}
+
+body {
+    height: 100%;
+    /* display: flex; */
+    box-sizing: border-box;
+    /* flex-direction: column; */
+    overflow: auto;
+    /* background-color: aquamarine; */
+}
+
+.white {
+    background-color: #F4F7EB;
+}
+
+.whiteText {
+    color: #F4F7EB;
+}
+
+.olive {
+    background-color: #A4B75F;
+}
+
+.oliveText {
+    color: #A4B75F;
+}
+
+.green {
+    background-color: #709B50;
+}
+
+.greenText {
+    color: #709B50;
+}
+
+.blue {
+    background-color: #4D7889;
+}
+
+.blueText {
+    color: #4D7889;
+}
+
+.midnight {
+    background-color: #13262D;
+}
+
+.midnightText {
+    color: #13262D;
+}
+
+.aboreto {
+    font-family: 'Aboreto', 'calibri', serif;
+}
+
+.notoSerif {
+    font-family: 'Noto Serif', sans-serif;
+}
+
+.arialBlack {
+    font-family: 'Arial Black', Arial, 'Cambria', serif;
+}
+
+.calibri {
+    font-family: Calibri, 'cambria', serif;
+    font-size: large;
+}
+
+.merriweatherHeader {
+    font-family: 'Merriweather', serif;
+    font-size: large;
+    font-weight: bold;
+}
+
+.merriweatherDD {
+    font-family: 'Merriweather', serif;
+    font-size: medium;
+    font-weight: lighter;
+}
+
+
+/* header */
+.pageTop {
+    min-height: 10%;
+    padding: 6px 5%;
+}
+
+header, nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header a, nav a {
+    text-decoration: none;
+    color: white;
+}
+
+.mainLogo {
+    width: 75px;
+}
+
+.pageTitles {
+    font-size: 32px;
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+    margin-left: 16px;
+}
+
+.altName {
+    font-size: 20px;
+    /* text-align: center; */
+}
+
+
+/* navigation bar */
+.homeIcon {
+    width: 40px;
+    float: inline-start;
+}
+
+.navbar {
+    font-weight: bold;
+    box-shadow: 0px 2px 10px 2px rgb(0 0 0 / 66%);
+    justify-content: space-between;
+    padding: 0px 1%;
+}
+
+.navbar a {
+    display: flex;
+    margin: 0px 8px;
+    padding: 12px;
+}
+
+
+/* unsure what this was for. fixes the contacts page navbar problem */
+/* .navbarContent {
+    transition: 0.4s;
+} */
+
+
+.navbarContent {
+    color: white;
+    transition: color 1s;
+}
+
+.navbarContent:hover {
+    color: #cc0000;
+    /* transition: color 1s; */
+}
+
+.navbar ul {
+    display: flex;
+}
+
+.navbar ul, .staffContacts ul {
+    list-style-type: none;
+}
+
+.dropdownContent {
+    transition: 0.4s;
+    opacity: 0;
+    position: absolute;
+    min-width: 160px;
+    z-index: 10;
+    visibility: collapse;
+}
+
+.submenuDropdown a:first-child span::after {
+    transition: 0.2s;
+    display: inline-block;
+    position: absolute;
+    left: 85%;
+    content: ">";
+    color: black;
+}
+
+.submenuDropdown:hover a:first-child span::after {
+    /* transition: 0.2s; */
+    transform: rotate(90deg);
+    color: #cc0000;
+}
+
+.navbarSubMenu {
+    transition: 0.4s;
+    opacity: 0;
+    flex-direction: column;
+    position: absolute;
+    left: 91.4%;
+    top: 46.5%;
+    visibility: collapse;
+}
+
+.navbarDropdown:hover .dropdownContent, .submenuDropdown:hover .navbarSubMenu {
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 0.4s, visibility 0.4s;
+}
+
+.dropdownContent a {
+    background-color: #F4F7EB;
+    color: black;
+    box-shadow: 2px 2px 5px rgb(0 0 0 / 66%);
+    width: 160px;
+    transition: background-color 0.4s, color 0.4s, box-shadow 0.4s;
+}
+
+.dropdownContent a:hover {
+    /* transition: 0.4s; */
+    color: #cc0000;
+    background-color: lightgray;
+}
+
+.sticky {
+    /* overflow: hidden; */
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0px;
+    z-index: 10;
+}
+
+
+/* main */
+main {
+    min-height: 75%;
+    text-align: center;
+    /* padding: 12px; */
+}
+
+main h1, main div {
+    margin: 0px auto;
+    /* margin-top: 12px; */
+    padding: 12px 0px;
+    /* width: 90%; */
+}
+
+.bannerHeight {
+    min-height: 500px;
+    width: 100%;
+    background-image: url("pictures/soowahlieLand/river_sunset.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    /* display: flex; */
+}
+
+.heroImage {
+    width: 100%;
+    object-fit: none;
+    object-position: 0 35%;
+    overflow: hidden;
+}
+
+.welcome {
+    text-align: center;
+    font-size: 40px;
+    /* position: absolute; */
+    padding: 12px;
+    margin: 12px 25% 0px 25%;
+    /* border-radius: 80px;
+    background-image: radial-gradient(black 30%, transparent 90%); */
+}
+
+.textShadowB {
+    text-shadow: 2px 2px 4px black;
+}
+
+.textShadowG {
+    text-shadow: 2px 2px 5px grey;
+}
+
+.mainHeight {
+    min-height: 400px;
+    padding: 20px 80px 0px 80px;
+}
+.mainText {
+    font-size: 18px;
+    text-align: left;
+}
+
+.floatLeft {
+    float: left;
+}
+
+.floatRight {
+    float: Right;
+}
+
+.landsImage {
+    width: 500px;
+    padding: 12px;
+}
+
+.hpMissionHeight {
+    /* min-height: 300px; */
+    height: max-content;
+    padding-bottom: 72px;
+}
+
+.hpStatementHeight {
+    /* min-height: 220px; */
+    height: max-content;
+    padding-bottom: 40px;
+}
+
+.statementSpacing {
+    position: relative;
+}
+
+.mainCenter {
+    max-width: 50%;
+    margin: auto;
+}
+
+.homeStatements {
+    padding-top: 12px;
+    line-height: 2em;
+    font-style: italic;
+    font-size: large;
+    font-family: 'Open Sans', sans-serif;
+    /* position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%); */
+}
+
+.missionFade {
+    background-image: linear-gradient(#13262D 80%, #4D7889 90%);
+}
+
+.newsReal {
+    display: flex;
+}
+
+.newsfeedDemo {
+    border: 2px solid black;
+    width: 400px;
+    height: 300px;
+    background-color: azure;
+}
+
+
+.socialsBar {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    justify-content: space-between;
+    /* background-color: blueviolet; */
+    height: 20em;
+
+}
+.socialsBar div h2 {
+    text-align: center;
+}
+
+.socialLinks {
+    border: 1px solid black;
+    border-radius: 100px;
+    padding: 12px;
+}
+
+
+
+/* lands */
+.landsTable {
+    display: flex;
+    justify-content: center;
+    margin-top: 18px;
+    border-collapse: collapse;
+}
+
+.landsTable td, th{
+    padding: 12px 8px;
+    text-align: left;
+    border-left: 1px solid lightgray;
+}
+
+.landsTable tr:nth-child(even) {
+    background-color: #dddddd;
+}
+
+.landsTable th {
+    background-color: #13262D;
+    color: white;
+}
+
+.landsPDF, .landsPDF a {
+    text-decoration: none;
+    list-style-type: none;
+}
+
+
+
+/* staff page */
+.staffContacts ul {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.staffContacts ul li {
+    flex: 1 0 33%;
+    margin-top: 60px;
+}
+
+.staffContacts ul li ~ div, h2, h3, p {
+    margin-top: 8px;
+}
+
+.staffPic {
+    height:200px;
+    width: 200px;
+    border: 4px solid black;
+    border-radius: 50%;
+    background-color: #A4B75F;
+}
+
+.staffContacts img {
+    object-fit: cover;
+    width: 200px;
+    height: 200px;
+    border: 4px solid black;
+    border-radius: 50%;
+}
+
+.staffName {
+    font-weight: bolder;
+    font-size: 28px;
+    list-style-type: none;
+
+}
+
+.staffTitle {
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.staffInfo {
+    font-weight: normal;
+    font-size: 16px;
+}
+
+.contactHeight {
+    height: 200px;
+}
+
+.contactTab {
+    display: flex;
+    flex-direction: row;
+    background-image: linear-gradient(grey 80%, black 90%);
+}
+
+.contactSections {
+    color: white;
+    font-size: 22px;
+    height: auto;
+}
+
+.contactsAccordion {
+    /* margin-top: 20px; */
+    position: relative;
+    /* margin: 70px auto; */
+    width: 80%;
+}
+
+[id*="openContactsAboutAcrd"], [id*="closeContactsAboutAcrd"] {
+    background: #13262D;
+    /* border-bottom: 1px solid #fff; */
+    border-radius: 40px;
+    line-height: 40px;
+    /* height: 40px; */
+    display: block;
+    margin: 0 auto;
+    position: relative;
+    width: 50%;
+}
+
+[id*="closeContactsAboutAcrd"] {
+    display: none;
+}
+
+.contactsAccordion a {
+    color: white;
+    background-color: #13262D;
+    font-size: 20px;
+    /* font-weight: normal; */
+    /* padding-left: 2%; */
+    text-decoration: none;
+    /* text-shadow: none; */
+}
+
+.contactsAccordion a:hover {
+    background-color: #4D7889;
+}
+
+/* This might be for the drop down arrow, which is not needed as of now */
+[id*="openContactsAboutAcrd"]:after, [id*="closeContactsAboutAcrd"]:after {
+    content: "";
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 10px solid rgba(255, 255, 255, 0.6);
+    position: absolute;
+    /* right: 5px; */
+    margin-left: 12px;
+    top: 15px;
+    z-index: 999;
+    transform: rotate(-90deg);
+    -webkit-transform: rotate(-90deg);
+}
+
+.targetFix {
+    display: block;
+    top: 0;
+    left: 0;
+    position: fixed;
+}
+
+.accordionContent {
+    background: #F4F7EB;
+    height: 0;
+    margin-top: 12px;
+    padding: 0 2.5%;
+    position: absolute;
+    overflow: hidden;
+    width: 200%;
+    font-size: 17px;
+    transition: all 0.2s ease;
+    -webkit-transition: all 0.2s ease;
+    -moz-transition: all 0.2s ease;
+    box-shadow: 2px 2px 5px rgb(0 0 0 / 66%);
+}
+
+.accordionContent p {
+    padding-bottom: 16px;
+}
+
+.accordionContent p:last-child {
+    padding-bottom: 0px;
+}
+
+.contactsAccordion span:target ~ .accordionContent {
+    display: block;
+    height: auto;
+    padding: 12px 5%;
+    border: 2px solid black;
+    border-radius: 12px;
+    /* padding-bottom: 25px;
+    padding-top: 10px; */
+}
+
+.contactsAccordion span:target ~ [id*="closeContactsAboutAcrd"] {
+    display: block;
+    background-color: #4D7889;
+}
+
+.contactsAccordion span:target ~ [id*="openContactsAboutAcrd"] {
+    display: none;
+}
+
+.contactsAccordion span:target ~ [id*="closeContactsAboutAcrd"]:after {
+    border-top: 10px solid rgba(255, 255, 255, 0.6);
+    transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+}
+
+
+
+/* decide if one of these is better than the other */
+
+/* .contactsAccordion > input[name="collapse"] {
+    display: none;
+} */
+
+/* .contactsAccordion input {
+    position: absolute;
+    opacity: 0;
+    z-index: ;
+} */
+
+
+
+/* .contactAbout {
+    background-color: #F4F7EB;
+    color: black;
+    overflow: hidden;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    max-height: 5000px;
+    max-width: 50%;
+    padding: 12px;
+    margin-top: 18px;
+    border: 2px solid #13262D;
+    transition: max-height 4s ease, max-width 4s ease, border 1s, background-color 0.2s, color 1s ease-in 0.5s;
+} */
+
+/* .contactAbout {
+    max-height: 0px;
+    max-width: 50%;
+    padding: 0px;
+    font-size: 0px;
+    color: transparent;
+    background-color: transparent;
+    border: 2px solid transparent;
+    overflow: hidden;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    padding: 12px;
+    margin-top: 18px;
+    transition: max-height 4s, background-color 0.2s;
+    transition: max-height 4s ease, max-width 4s ease, border 1s, background-color 0.2s, color 1s ease-in 0.5s;
+} */
+
+/* .contactsAccordion label {
+    cursor: pointer;
+    border-radius: 40px;
+    color:#dddddd;
+    background-color: #13262D;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 12px;
+} */
+
+
+
+/* the second half of this might not be needed */
+
+/* .contactsAccordion label:hover, .contactsAccordion label:checked {
+    background-color: #4D7889;
+} */
+
+/* .contactsAccordion label:hover {
+    background-color: #4D7889;
+} */
+
+
+
+/* input:checked ~ .contactAbout {
+    max-height: 5000px;
+    max-width: 50%;
+    padding: 12px;
+    font-size: large;
+    background-color: #F4F7EB;
+    color: black;
+    border: 2px solid #13262D;
+    transition: max-height 4s, background-color 0.2s;
+    transition: max-height 4s ease 1s, max-width 4s ease 1s, border 1s, background-color 1s ease, color 0.5s linear, font-size 0.5s linear 0.5s, padding 4s;
+} */
+
+/* .contactsAccordion input[name="collapse"]:checked ~ .contactAbout {
+    max-height: 5000px;
+    max-width: 50%;
+    padding: 12px;
+    font-size: large;
+    background-color: #F4F7EB;
+    color: black;
+    border: 2px solid #13262D;
+    transition: max-height 4s, background-color 0.2s;
+    transition: max-height 4s ease 1s, max-width 4s ease 1s, border 1s, background-color 1s ease, color 0.5s linear, font-size 0.5s linear 0.5s, padding 4s;
+} */
+
+/* .contactsAccordion input[name="collapse"]:checked ~ .contactAbout {
+    max-height: 0px;
+    max-width: 50%;
+    padding: 0px;
+    font-size: 0px;
+    color: transparent;
+    background-color: transparent;
+    border: 2px solid transparent;
+    transition: max-height 4s ease 1s, max-width 4s ease 1s, border 1s, background-color 1s ease, color 0.5s linear, font-size 0.5s linear 0.5s, padding 4s;
+} */
+
+
+/* footer */
+footer {
+    display: flex;
+    min-height: 5%;
+    justify-content: space-between;
+    align-items: center;
+    background-color: black;
+    color: white;
+}
+
+.footerLeft {
+    margin-left: 10%;
+    padding-bottom: 12px;
+}
+
+.footerRight {
+    margin-right: 10%;
+    padding-bottom: 12px;
+}
