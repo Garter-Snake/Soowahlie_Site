@@ -1,64 +1,65 @@
 /* core */
 * {
     box-sizing: border-box;
-    margin: 0px;
-}
-
-html {
-    min-height: 100vh;
-    font-family: sans-serif;
 }
 
 body {
-    height: 100%;
-    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    font-family: sans-serif;
+    margin: 0px;
     overflow: auto;
 }
 
-.flex {
+header {
+    /* display: flex; */
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 12px 0px;
+    order: 2;
+}
+
+/* might need changing on how navbar is coded */
+/* header, nav {
     display: flex;
+    justify-content: center;
+    align-items: center;
+} */
+
+/* header a, nav a {
+    text-decoration: none;
+    color: white;
+} */
+
+main {
+    text-align: center;
+    order: 3;
+}
+
+footer {
+    font-size: small;
+    background-color: black;
+    order: 4;
+}
+
+.footerContactInfo:nth-child(2) {
+    margin-bottom: 50px;
 }
 
 
-/* colors and text colors */
-.white {
-    background-color: #F4F7EB;
-}
-
-.whiteText {
-    color: #F4F7EB;
-}
-
-.olive {
-    background-color: #A4B75F;
-}
-
-.oliveText {
-    color: #A4B75F;
-}
-
-.green {
-    background-color: #709B50;
-}
-
-.greenText {
-    color: #709B50;
-}
-
+/* color */
 .blue {
-    background-color: #4D7889;
-}
-
-.blueText {
-    color: #4D7889;
+    background-color: #4d7889;
 }
 
 .midnight {
     background-color: #13262D;
 }
 
-.midnightText {
-    color: #13262D;
+.footerContacts {
+    background-image: linear-gradient(grey 80%, black 90%);
 }
 
 
@@ -71,664 +72,442 @@ body {
     font-family: 'Noto Serif', sans-serif;
 }
 
-.arialBlack {
-    font-family: 'Arial Black', Arial, 'Cambria', serif;
-}
 
-.calibri {
-    font-family: Calibri, 'cambria', serif;
-    font-size: large;
-    font-weight: normal;
-}
 
-.merriweatherHeader {
-    font-family: 'Merriweather', serif;
-    font-size: large;
-    letter-spacing: 1px;
-}
-
-.merriweatherDD {
-    font-family: 'Merriweather', serif;
-    /* font-size: medium; */
-    font-weight: lighter;
-    letter-spacing: normal;
+.copyright {
+    font-size: smaller;
 }
 
 .bold {
     font-weight: bold;
 }
 
-
-/* header */
-.pageTop {
-    min-height: 10%;
-    padding: 6px 5%;
+.italic {
+    font-style: italic;
 }
 
-header, nav {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-header a, nav a {
+.textDec, .navbar li a, div {
     text-decoration: none;
-    color: white;
-}
-
-.mainLogo {
-    width: 75px;
 }
 
 .pageTitles {
-    font-size: 32px;
-    display: flex;
-    flex-direction: column;
-    margin-left: 16px;
+    font-size: 23px;
 }
 
 .altName {
-    font-size: 20px;
-    /* text-align: center; */
+    font-size: 18px;
 }
 
-
-/* navigation bar */
-.navbar .homeIcon {
-    width: 32px;
-    padding: 6px;
+.mainHeader {
+    font-size: 21px;
 }
 
-.navbar {
-    box-shadow: 0px 2px 10px 2px rgb(0 0 0 / 66%);
-    justify-content: space-between;
-    padding: 0px 1%;
+.mainText {
+    font-size: 18px;
 }
 
-.navbar a {
-    display: flex;
-    margin: 0px 8px;
-    padding: 12px;
+.underline {
+    border-bottom: 2px solid #F4F7EB;
+    width: fit-content;
+    margin: auto;
 }
 
-.navbarContent {
-    transition: 0.4s;
-}
-
-.navbarContent:hover {
-    transition: 0.4s;
-    color: #cc0000;
-}
-
-.navbar ul {
-    display: flex;
-}
-
-.navbar ul, .staffContacts ul, .mainHeight ul {
-    list-style-type: none;
-}
-
-.dropdownContent {
-    transition: 0.4s;
-    opacity: 0;
-    position: absolute;
-    min-width: 160px;
-    z-index: 10;
-    visibility: collapse;
-}
-
-.submenuDropdown a:first-child span::after {
-    transition: 0.2s;
-    display: inline-block;
-    position: absolute;
-    left: 85%;
-    content: ">";
-    color: black;
-}
-
-.submenuDropdown:hover a:first-child span::after {
-    transition: 0.2s;
-    transform: rotate(90deg);
-    color: #cc0000;
-}
-
-.navbarSubMenu {
-    transition: 0.4s;
-    opacity: 0;
-    flex-direction: column;
-    position: absolute;
-    left: 91.4%;
-    top: 46.5%;
-    visibility: collapse;
-}
-
-.navbarDropdown:hover .dropdownContent, .submenuDropdown:hover .navbarSubMenu {
-    transition: 0.4s;
-    opacity: 1;
-    visibility: visible;
-}
-
-.dropdownContent a {
-    transition: 0.4s;
-    background-color: #F4F7EB;
-    color: black;
-    box-shadow: 2px 2px 5px rgb(0 0 0 / 66%);
-    width: 160px;
-}
-
-.dropdownContent a:hover {
-    transition: 0.4s;
-    color: #cc0000;
-    background-color: lightgray;
-}
-
-.sticky {
-    /* overflow: hidden; */
-    position: -webkit-sticky;
-    position: sticky;
-    top: 0px;
-    z-index: 10;
-}
-
-
-/* main */
-main {
-    min-height: 75%;
-    text-align: center;
-    /* padding: 12px; */
-}
-
-main h1, main div {
-    margin: 0px auto;
-    /* margin-top: 12px; */
-    padding: 12px 0px;
-    /* width: 90%; */
-}
-
-.bannerHeight {
-    min-height: 500px;
-    width: 100%;
-    background-image: url("pictures/soowahlieLand/river_sunset.jpg");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-}
-
-.heroImage {
-    width: 100%;
-    object-fit: none;
-    object-position: 0 35%;
-    overflow: hidden;
-}
-
-.welcome {
-    text-align: center;
-    font-size: 40px;
-    /* position: absolute; */
-    padding: 12px;
-    margin: 12px 25% 0px 25%;
-    /* border-radius: 80px;
-    background-image: radial-gradient(black 30%, transparent 90%); */
+.whiteText, .navbar li, a, div {
+    color: #F4F7EB;
 }
 
 .textShadowB {
     text-shadow: 2px 2px 4px black;
 }
 
-.textShadowG {
-    text-shadow: 2px 2px 5px grey;
-}
 
-.mainHeight {
-    min-height: 400px;
-    padding: 20px 5% 0px 5%;
-}
-
-.mainHeader {
-    font-size: 36px;
-}
-
-.mainSubHeader {
-    font-size: 28px;
-}
-
-.mainText {
-    font-size: 18px;
-    text-align: left;
-}
-
-.mainTextMargin {
-    margin: 0 10%;
-    padding-top: 24px;
-}
-
-.separator {
-    border-bottom: 2px solid grey;
-}
-
-.landsImage {
-    width: 500px;
-    padding: 12px;
-}
-
-.hpMissionHeight {
-    /* min-height: 300px; */
-    height: max-content;
-    padding-bottom: 72px;
-}
-
-.hpStatementHeight {
-    /* min-height: 220px; */
-    height: max-content;
-    padding-bottom: 40px;
-}
-
-.statementSpacing {
-    position: relative;
-}
-
-.mainCenter {
-    max-width: 50%;
-    margin: auto;
-}
-
-.homeStatements {
-    padding-top: 12px;
-    line-height: 2em;
-    font-style: italic;
-    font-size: large;
-    font-family: 'Open Sans', sans-serif;
-    /* position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%); */
-}
-
-.missionFade {
-    background-image: linear-gradient(#13262D 80%, #4D7889 90%);
-}
-
-.bgImage {
-    background: linear-gradient(rgba(0,0,0,0.5), rgba(0, 0, 0, 0.5)), url("pictures/soowahlieLand/riverBG.jpg") no-repeat center fixed;
-    background-size: cover;
-}
-
-
-/* newsfeed */
-.newsreel {
+/* catch all */
+.flex {
     display: flex;
 }
 
-.newsfeed {
-    border: 2px solid black;
-    width: 400px;
-    height: 300px;
-    background-color: azure;
-    box-shadow: 2px 2px 5px rgb(0 0 0 / 66%);
+.flexRow {
+    flex-direction: row;
 }
 
-.newsfeedArticle {
-    display: flex;
+.mobileColumn {
     flex-direction: column;
-    height: 100%;
 }
 
-.newsfeedSnippet {
-    padding: 0px 4px;
-    white-space: normal;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    display: -webkit-box;
-    -webkit-line-clamp: 5;
-    -webkit-box-orient: vertical;
-}
-
-.newsfeedArticle a {
-    color: grey;
-    font-weight: bold;
-    margin: 12px auto 0px auto;
-    width: fit-content;
-    transition: 0.4s;
-}
-
-.newsfeedArticle a:hover {
-    color: red;
-}
-
-.newsfeedDate {
-    display: flex;
-    align-items: flex-end;
-    margin-left: 12px;
-    color: grey;
-    flex: 1;
-}
-
-.newsfeedDate span {
-    border-top: 2px solid grey;
-    padding-top: 8px;
-}
-
-
-/* .socialsBar {
-    display: flex;
-    flex-direction: column;
-    text-align: left;
+.justifyBetween {
     justify-content: space-between;
-    height: 20em;
 }
 
-.socialsBar div h2 {
+.centerTA {
     text-align: center;
 }
 
-.socialLinks {
-    border: 1px solid black;
-    border-radius: 100px;
-    padding: 12px;
-} */
-
-/* image carousel */
-/* .pic-ctn {
-    width: 100vw;
-    height: 200px;
-} */
-
-
-/* Soowahlie Pride */
-@keyframes display {
-    0% {
-      transform: translateX(200px);
-      opacity: 0;
-    }
-    10% {
-      transform: translateX(0);
-      opacity: 1;
-    }
-    20% {
-      transform: translateX(0);
-      opacity: 1;
-    }
-    30% {
-      transform: translateX(-200px);
-      opacity: 0;
-    }
-    100% {
-      transform: translateX(-200px);
-      opacity: 0;
-    }
-}
-
-.pic-ctn {
-    position: relative;
-    height: 600px;
-    margin: 18px 25% 0px 25%;
-    padding: 0px;
-}
-
-.pic-ctn > img {
-    width: 300px;
-    position: absolute;
-    top: 0;
-    left: calc(50% - 150px);
-    opacity: 0;
-    animation: display 10s infinite;
-}
-  
-  img:nth-child(2) {
-    animation-delay: 2s;
-}
-  img:nth-child(3) {
-    animation-delay: 4s;
-}
-  img:nth-child(4) {
-    animation-delay: 6s;
-}
-  img:nth-child(5) {
-    animation-delay: 8s;
-}
-
-
-/* Lands */
-.projectsHeader {
-    margin-top: 0px;
-    padding: 12px 0;
-}
-
-/* Lands Table */
-.landsTable {
-    display: flex;
+.centerJC {
     justify-content: center;
-    margin-top: 18px;
-    border-collapse: collapse;
 }
 
-.landsTable td, th{
-    padding: 12px 8px;
-    text-align: left;
-    border-left: 1px solid lightgray;
-}
-
-.landsTable tr:nth-child(even) {
-    background-color: #dddddd;
-}
-
-.landsTable th {
-    background-color: #13262D;
-    color: white;
-}
-
-.landsPDF, .landsPDF a {
-    text-decoration: none;
-    list-style-type: none;
-}
-
-.landsStaff {
-    display: flex;
-    flex-direction: row;
-}
-
-
-/* staff page */
-.staffContacts ul {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    justify-content: center;
-
-}
-
-.staffContacts ul li {
-    flex: 1 0 33%;
-    margin-top: 60px;
-}
-
-.staffContacts ul li ~ div, h2, h3, p {
-    margin-top: 8px;
-}
-
-.staffPic {
-    height:200px;
-    width: 200px;
-    border: 4px solid black;
-    border-radius: 50%;
-    background-color: #A4B75F;
-}
-
-.staffContacts img {
-    object-fit: cover;
-    width: 200px;
-    height: 200px;
-    border: 4px solid black;
-    border-radius: 50%;
-}
-
-.staffName {
-    font-size: 28px;
-    /* list-style-type: none;    not sure if needed */
-}
-
-.staffTitle {
-    font-size: 20px;
-}
-
-.staffInfo {
-    font-weight: normal;
-    font-size: 16px;
-}
-
-.contactHeight {
-    height: 200px;
-}
-
-.contactTab {
-    display: flex;
-    flex-direction: row;
-    background-image: linear-gradient(grey 80%, black 90%);
-}
-
-.contactSections {
-    color: white;
-    font-size: 22px;
-    height: auto;
-}
-
-
-/* About Dropdown */
-.contactsAccordion {
-    position: relative;
-    width: 80%;
-}
-
-[id*="openContactsAboutAcrd"], [id*="closeContactsAboutAcrd"] {
-    background: #13262D;
-    /* border-bottom: 1px solid #fff; */
-    border-radius: 40px;
-    line-height: 40px;
-    /* height: 40px; */
-    display: block;
-    margin: 0 auto;
-    position: relative;
-    width: 50%;
-}
-
-[id*="closeContactsAboutAcrd"] {
-    display: none;
-}
-
-.contactsAccordion a {
-    color: white;
-    background-color: #13262D;
-    font-size: 20px;
-    /* font-weight: normal; */
-    /* padding-left: 2%; */
-    text-decoration: none;
-    /* text-shadow: none; */
-}
-
-.contactsAccordion a:hover {
-    background-color: #4D7889;
-}
-
-[id*="openContactsAboutAcrd"]:after, [id*="closeContactsAboutAcrd"]:after {
-    content: "";
-    border-left: 10px solid transparent;
-    border-right: 10px solid transparent;
-    border-top: 10px solid rgba(255, 255, 255, 0.6);
-    position: absolute;
-    /* right: 5px; */
-    margin-left: 12px;
-    top: 15px;
-    z-index: 999;
-    transform: rotate(-90deg);
-    -webkit-transform: rotate(-90deg);
-    z-index: 1;
-}
-
-.targetFix {
-    display: block;
-    top: 0;
-    left: 0;
-    position: fixed;
-}
-
-.accordionContent {
-    background: #F4F7EB;
-    height: 0;
-    margin-top: 12px;
-    padding: 0 2.5%;
-    position: absolute;
-    overflow: hidden;
-    width: 200%;
-    font-size: 17px;
-    transition: all 0.2s ease;
-    -webkit-transition: all 0.2s ease;
-    -moz-transition: all 0.2s ease;
-    box-shadow: 2px 2px 5px rgb(0 0 0 / 66%);
-}
-
-.accordionContent p {
-    padding-bottom: 16px;
-}
-
-.accordionContent p:last-child {
-    padding-bottom: 0px;
-}
-
-.contactsAccordion span:target ~ .accordionContent {
-    display: block;
-    height: auto;
-    padding: 12px 5%;
-    border: 2px solid black;
-    border-radius: 12px;
-    /* padding-bottom: 25px;
-    padding-top: 10px; */
-}
-
-.contactsAccordion span:target ~ [id*="closeContactsAboutAcrd"] {
-    display: block;
-    background-color: #4D7889;
-}
-
-.contactsAccordion span:target ~ [id*="openContactsAboutAcrd"] {
-    display: none;
-}
-
-.contactsAccordion span:target ~ [id*="closeContactsAboutAcrd"]:after {
-    border-top: 10px solid rgba(255, 255, 255, 0.6);
-    transform: rotate(0deg);
-    -webkit-transform: rotate(0deg);
-}
-
-.cAboutMiddle {
-    left: -50%;
-}
-
-.cAboutRight {
-    right: 1px;
+.centerAI {
+    align-items: center;
 }
 
 .hidden {
+    display: none;
+}
+
+.noOpacity {
+    opacity: 0;
+}
+
+.listStyleNone li {
+    list-style-type: none;
+}
+
+.bulletList {
+    text-align: left;
+    margin-left: 28px;
+}
+
+.bulletList li {
+    padding-bottom: 18px;
+}
+
+
+/* catch all padding and margin */
+.smallSidePadding {
+    padding-left: 2.5%;
+    padding-right: 2.5%
+}
+
+.smallTBPadding {
+    padding-top: 4px;
+    padding-bottom: 4px;
+}
+
+.mainTextPadding {
+    padding: 20px 5% 0px 5%;
+}
+
+.imagePadding {
+    padding: 12px;
+}
+
+
+
+/* images */
+.mainLogo {
+    width: 75px;
+}
+
+.responsiveImage {
+    max-width: 80%;
+    height: auto;
+}
+
+
+
+/* header */
+
+
+/* navbar */
+.sticky {
+    /* overflow: hidden; */
+    /* position: -webkit-sticky; */
+    position: sticky;
+    top: 0px;
+    z-index: 1;
+    /* border-bottom: black ; */
+}
+
+.navWrapper {
+    order: 1;
+    padding: 12px;
+    width: 100%;
+    box-shadow: 0px 2px 10px 2px rgb(0 0 0 / 66%);
+}
+
+nav {
+    padding: 0px 2.5%;
+}
+
+.burgerWrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+}
+
+.hamburger {
+    border: solid white 2px;
+    border-radius: 50px;
+    background-color: white;
+    height: 1px;
+    width: 50%;
+    transition: all 0.35s;
+}
+
+input:checked ~ label .burgerWrapper .hamburger {
+    border: solid red 2px;
+    background-color: red;
+}
+
+.patty {
+    margin: 3px 0px;
+}
+
+.navbar {
+    background: rgba(0,0,0,.7);
+    position: absolute;
+    top: 4.0em;
+    bottom: -94vh;
+    left: -100%;
+    right: 100%;
+    transition: all 0.35s;
+    margin: 0;
+    /* margin-top: 2.5em; */
+    padding: 0px 40px 0px 16px;
+    /* height: 500px; */
+    /* overflow: scroll; */
+
+    /* for testing, keeps navbar on screen */
+    /* left: 0vw;
+    right: 0vw; */
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+input:checked ~ .navbar {
+    left: 0vw;
+    right: 0vw;
+    transition: all 0.35s;
+}
+
+.navbar li {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    padding: 6px 0px;
+}
+
+.navbar ul li ul li:first-child {
+    padding-top: 12px;
+}
+
+.navbar li a {
+    display: flex;
+    align-items: center;
+}
+
+.anchor {
+    display: block;
+    position: relative;
+    top: -128px;
     visibility: hidden;
+}
+
+.navbar ul li div:focus-within ~ .navbarSubMenu {
+    max-height: 100vh;
+    visibility: visible;
+    opacity: 1;
+}
+
+.navbar ul li ul li div:focus-within ~ .navbarSubMenuDD, .navbarSubMenu:focus-within {
+    max-height: 100vh;
+    visibility: visible;
+    opacity: 1;
+}
+
+.filler {
+    flex-grow: 2;
+    height: 28px;
+}
+
+.arrowDD {
+    font-size: 1.5em;
+    transition: all 0.35s;
+}
+
+.navbar ul li div:focus-within > .arrowDD {
+    text-align: center;
+    transform: rotate(90deg);
+    color: red;
+}
+
+.dropdownContent, .navbarSubMenu {
+    max-height: 0px;
+    visibility: collapse;
+    opacity: 0;
+    display: none;
+    display: flex;
+    flex-direction: column;
+    transition: all 0.35s;
+}
+
+.dropdownContent a {
+    padding: 8px 0px;
+}
+
+input:checked ~ .dropdownContent {
+    max-height: 100vh;
+    /* margin: 8px 0px 8px 16px; */
+    visibility: visible;
+    opacity: 1;
+    padding: 12px 0px;
+    /* transition: all 0.35s; */
+}
+
+input:checked ~ .dropdownContent a:last-child {
+    padding-bottom: 0px;
+}
+
+/* .navbarSubMenu {
+    max-height: 0;
+    visibility: collapse;
+} */
+
+.navbar li button:checked ~ .dropdownContent {
+    max-height: 100vh;
+    visibility: visible;
+    opacity: 1;
+    padding: 12px 0px;
+}
+
+.submenuDropdown input:checked ~ .navbarSubMenu {
+    max-height: 100vh;
+    visibility: visible;
+    opacity: 1;
+    padding: 12px 0px;
 }
 
 
 
 /* footer */
-footer {
-    display: flex;
-    min-height: 5%;
-    justify-content: space-between;
-    align-items: center;
-    background-color: black;
-    color: white;
+.footerContactInfo h3 {
+    margin: 12px 0px;
+    font-size: 20px;
 }
 
-.footerLeft {
-    margin-left: 10%;
-    padding-bottom: 12px;
+.footerContactInfo p {
+    margin: 0px 0px 8px 0px;
+    font-size: 12px;
 }
 
-.footerRight {
-    margin-right: 10%;
-    padding-bottom: 12px;
+
+/* media queries */
+@media screen and (min-width: 1024px) {
+    /* fonts */
+    .mainHeader {
+        font-size: 36px;
+    }
+
+    .mainText {
+        font-size: 20px;
+    }
+    
+    /* catch all */
+    .desktopRow {
+        flex-direction: row;
+    }
+
+
+    .spaceBetween {
+        justify-content: space-between;
+    }
+
+
+    /* header */
+    header {
+        display: flex;
+        justify-content: center;
+        order: 1;
+    }
+    
+    .pageTitles {
+        display: flex;
+        flex-direction: column;
+        font-size: 40px;
+        text-align: left;
+        padding-left: 12px;
+    }
+
+    .altName {
+        font-size: 18px;
+    }
+    
+
+
+
+    .fortyWidth {
+        width: 40%;
+    }
+    
+    .halfWidth {
+        width: 50%;
+    }
+    
+    .sixtyWidth {
+        width: 60%
+    }
+
+
+    /* Navbar */
+    .navWrapper {
+        order: 2;
+    }
+
+    /* .navWrapper {
+        display: none;
+    } */
+
+    /* .navbar {
+        display: flex;
+        position: relative;
+        left: 0vw;
+        right: 0vw;
+
+    } */
+
+    /* .navbarTitle {
+        display: none;
+    }
+
+    .burgerWrapper {
+        display: none;
+    }
+
+    nav label {
+        display: none;
+    } */
+
+
+    /* footer */
+    .footerContactInfo h3 {
+        font-size: 26px;
+    }
+    
+    .footerContactInfo p {
+        font-size: 18px;
+    }
+
+    .footerContactInfo:nth-child(2) {
+        margin-bottom: 20px;
+    }
+
+    .copyright {
+        align-items: center;
+        font-size: medium;
+    }
+
+    .footerLeft {
+        margin-left: 10%;
+        padding-bottom: 12px;
+    }
+
+    .footerRight {
+        margin-right: 10%;
+        padding-bottom: 12px;
+    }
 }

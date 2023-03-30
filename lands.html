@@ -2,142 +2,328 @@
 <html lang="en" dir="ltr">
 <head>
     <meta charset="utf-8">
-    <title>Contacts</title>
+    <!-- added new meta tag for mobile -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lands</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" href="pictures/logo's/logo_march_7.gif">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@1,300&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Aboreto&family=Roboto:wght@100&display=swap" rel="stylesheet">
-    <!-- test font for paragraphs -->
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif&display=swap" rel="stylesheet">
 </head>
 
 <body>
-    <div class="pageTop blue">
-        <header>
-            <a href="index.html">
-                <img class="mainLogo" src="pictures/logo's/logo_march_7.gif">
-            </a>
+    <div class="sticky navWrapper midnight">
+        <nav>
+            <input type="checkbox" name="navControl" id="nav-control" class="hidden">
+            <label for="nav-control" class="flex justifyBetween">
+                <div class="flex centerAI burgerWrapper">
+                    <div class="hamburger"></div>
+                    <div class="hamburger patty"></div>
+                    <div class="hamburger"></div>
+                </div>
 
-            <div class="pageTitles bold">
-                <a href="index.html" class="aboreto textShadowB">
-                    SOOWAHLIE FIRST NATION
+                <a href="index.html" class="flex centerAI mainHeader whiteText textDec navbarTitle">
+                    Soowahlie
                 </a>
-
-                <a class="altName aboreto textShadowB" href="index.html">
-                    Th'ewa:li
-                </a>
-            </div>
-        </header>
-    </div>
-
-    <div class="sticky">
-        <nav class="navbar bold midnight">
-            <a href="index.html" class="homeIcon">
-                <img src="pictures/logo's/logo_march_7.gif" width="32px">
-            </a>
-
-            <ul>
-                <li class="navbarDropdown merriweatherHeader">
-                    <a class="navbarContent" href="about.html">ABOUT</a>
-                    <div class="dropdownContent merriweatherDD">
-                        <a href="about.html#aboutVH">Soowahlie Vision and History</a>
-                        <a href="about.html#aboutStaff">Staff</a>
-                    </div>
-                </li>
-
-                <li class="navbarDropdown merriweatherHeader">
-                    <a class="navbarContent" href="community.html">COMMUNITY</a>
-                    <div class="dropdownContent merriweatherDD">
-                        <a href="community.html#cmElders">Elders</a>
-                        <a href="community.html#cmYouth">Youth</a>
-                        <a href="community.html#cmCC">Community Coordinator</a>
-                        <a href="community.html#cmUE">Upcoming Events</a>
-                        <a href="community.html#cmLJ">Lady Jane</a>
-                        <a href="community.html#cmSuccesses">Successes</a>
-                    </div>
-                </li>
-
-                <li class="navbarDropdown merriweatherHeader">
-                    <a class="navbarContent" href="administration.html">ADMINISTRATION</a>
-                    <div class="dropdownContent merriweatherDD">
-                        <a href="administration.html#adminManagement">Management</a>
-                        <a href="administration.html#adminEM">Emergency Management</a>
-                        <a href="administration.html#adminEducation">Education</a>
-                        <a href="administration.html#adminHousing">Housing</a>
-                        <a href="administration.html#adminPWM">Public Works/ Maintenance</a>
-                        <a href="administration.html#adminSA">Social Assistance</a>
-                    </div>
-                </li>     
-
-                <li class="navbarDropdown merriweatherHeader">
-                    <a class="navbarContent" href="health.html">HEALTH</a>
-                    <div class="dropdownContent merriweatherDD">
-                        <a href="health.html#healthHD">Health Director</a>
-                        <a href="health.html#healthNP">Nurse Practitioner</a>
-                        <a href="health.html#healthCN">Community Nurse</a>
-                        <a href="health.html#healthDA">Drug & Alcohol</a>
-                        <a href="health.html#healthNutritionist">Nutritionist</a>
-                        <a href="health.html#healthCounselling">Counselling</a>
-                        <a href="health.html#healthPG">Parent Group</a>
-                        <a href="health.html#healthHO">Health Office</a>
-                        <a href="health.html#healthHC">Health Committee</a>
-                    </div>
-                </li>
     
-                <li class="navbarDropdown merriweatherHeader">
-                    <a class="navbarContent" href="lands.html">LANDS</a>
-                    <div class="dropdownContent merriweatherDD">
-                        <a href="lands.html#">Soowahlie Lands</a>
-                        <a href="lands.html#">Land Code</a>
-                        <a href="lands.html#">Committee</a>
-                        <div class="submenuDropdown">
-                            <a href="lands.html#"><span>Projects</span></a>
-                            <div class="navbarSubMenu">
-                                <a href="lands.html#">Land Use Plan</a>
-                                <a href="lands.html#">Solid Waste</a>
-                                <a href="lands.html#">Legacy Issues</a>
-                                <a href="lands.html#">Habitat Restoration</a>
-                                <a href="lands.html#">Wildfire Resiliency Plan</a>
-                                <a href="lands.html#">Environmental Clean Up</a>
+                <a href="index.html" class="flex centerAI homeIcon">
+                    <img src="pictures/logo's/logo_march_7.gif" width="32px">
+                </a>
+            </label>
+
+            <div class="navbar navItems flex">
+                <ul>
+                    <li class="flex">
+                        <div class="flex flexRow justifyBetween">
+                            <a href="about.html" class="navbarContent">ABOUT</a>
+                            <div tabindex="0" class="flex flexRow filler">
+                                <div class="filler noOpacity">_</div>
+                                <div class="arrowDD textWhite">></div>
                             </div>
                         </div>
-                        <a href="lands.html#">Land Code, Law & Other</a>
-                        <a href="lands.html#">Staff & Contact</a>
-                    </div>
-                </li>
-                    
-                <li class="navbarDropdown merriweatherHeader">
-                    <a class="navbarContent" href="council.html">COUNCIL</a>
-                    <div class="dropdownContent merriweatherDD">
-                        <a href="council.html#councilED">Economic Development</a>
-                        <a href="council.html#councilCC">Colonial Claim</a>
-                        <a href="council.html#councilCC">Governance</a>
-                        <a href="council.html#councilCC">Portfolios</a>
-                        <a href="council.html#councilCC">Council Index</a>
-                    </div>
-                </li>
-    
-                <li class="navbarDropdown merriweatherHeader">
-                    <a class="navbarContent" href="contact.html">CONTACTS</a>
-                    <div class="dropdownContent merriweatherDD">
-                        <a href="contact.html#contactBO">Band Office</a>
-                        <a href="contact.html#contactHO">Health Office</a>
-                        <a href="#">Other</a>
-                    </div>
-                </li>
-            </ul>
 
-            <button type="button">Login</button>
+                        <ul class="navbarSubMenu">
+                            <li>
+                                <a href="about.html#aboutVH" class="noTextDec textWhite">Soowahlie Vision and History</a>
+                            </li>
+
+                            <li>
+                                <a href="about.html#aboutStaff" class="noTextDec textWhite">Staff</a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li class="flex">
+                        <div class="flex flexRow justifyBetween">
+                            <a href="community.html" class="navbarContent">COMMUNITY</a>
+                            <div tabindex="0" class="flex flexRow filler">
+                                <div class="filler noOpacity">_</div>
+                                <div class="arrowDD textWhite">></div>
+                            </div>
+                        </div>
+
+                        <ul class="navbarSubMenu">
+                            <li>
+                                <a href="community.html#cmElders" class="noTextDec textWhite">Elders</a>
+                            </li>
+
+                            <li>
+                                <a href="community.html#cmYouth" class="noTextDec textWhite">Youth</a>
+                            </li>
+
+                            <li>
+                                <a href="community.html#cmCC" class="noTextDec textWhite">Community Coordinator</a>
+                            </li>
+
+                            <li>
+                                <a href="community.html#cmUE" class="noTextDec textWhite">Upcoming Events</a>
+                            </li>
+
+                            <li>
+                                <a href="community.html#cmLJ" class="noTextDec textWhite">Lady Jane</a>
+                            </li>
+
+                            <li>
+                                <a href="community.html#cmSuccesses" class="noTextDec textWhite">Successes</a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li class="flex">
+                        <div class="flex flexRow justifyBetween">
+                            <a href="administration.html" class="navbarContent">ADMINISTRATION</a>
+                            <div tabindex="0" class="flex flexRow filler">
+                                <div class="filler noOpacity">_</div>
+                                <div class="arrowDD textWhite">></div>
+                            </div>
+                        </div>
+
+                        <ul class="navbarSubMenu">
+                            <li>
+                                <a href="administration.html#adminManagement" class="noTextDec textWhite">Management</a>
+                            </li>
+
+                            <li>
+                                <a href="administration.html#adminEM" class="noTextDec textWhite">Emergency Management</a>
+                            </li>
+
+                            <li>
+                                <a href="administration.html#adminEducation" class="noTextDec textWhite">Education</a>
+                            </li>
+
+                            <li>
+                                <a href="administration.html#adminHousing" class="noTextDec textWhite">Housing</a>
+                            </li>
+
+                            <li>
+                                <a href="administration.html#adminPWM" class="noTextDec textWhite">Public Works/ Maintenance</a>
+                            </li>
+
+                            <li>
+                                <a href="administration.html#adminSA" class="noTextDec textWhite">Social Assistance</a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li class="flex">
+                        <div class="flex flexRow justifyBetween">
+                            <a href="health.html" class="navbarContent">HEALTH</a>
+                            <div tabindex="0" class="flex flexRow filler">
+                                <div class="filler noOpacity">_</div>
+                                <div class="arrowDD textWhite">></div>
+                            </div>
+                        </div>
+
+                        <ul class="navbarSubMenu">
+                            <li>
+                                <a href="health.html#healthHD" class="noTextDec textWhite">Health Director</a>
+                            </li>
+
+                            <li>
+                                <a href="health.html#healthNP" class="noTextDec textWhite">Nurse Practitioner</a>
+                            </li>
+
+                            <li>
+                                <a href="health.html#healthCN" class="noTextDec textWhite">Community Nurse</a>
+                            </li>
+
+                            <li>
+                                <a href="health.html#healthDA" class="noTextDec textWhite">Drug & Alcohol</a>
+                            </li>
+
+                            <li>
+                                <a href="health.html#healthNutritionist" class="noTextDec textWhite">Nutritionist</a>
+                            </li>
+
+                            <li>
+                                <a href="health.html#healthCounselling" class="noTextDec textWhite">Counselling</a>
+                            </li>
+
+                            <li>
+                                <a href="health.html#healthPG" class="noTextDec textWhite">Parent Group</a>
+                            </li>
+
+                            <li>
+                                <a href="health.html#healthHO" class="noTextDec textWhite">Health Office</a>
+                            </li>
+
+                            <li>
+                                <a href="health.html#healthHC" class="noTextDec textWhite">Health Committee</a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li class="flex">
+                        <div class="flex flexRow justifyBetween">
+                            <a href="lands.html" class="navbarContent">LANDS</a>
+                            <div tabindex="0" class="flex flexRow filler">
+                                <div class="filler noOpacity">_</div>
+                                <div class="arrowDD textWhite">></div>
+                            </div>
+                        </div>
+
+                        <ul class="navbarSubMenu">
+                            <li>
+                                <a href="lands.html#" class="noTextDec textWhite">Soowahlie Lands</a>
+                            </li>
+
+                            <li>
+                                <a href="lands.html#" class="noTextDec textWhite">Land Code</a>
+                            </li>
+
+                            <li>
+                                <a href="lands.html#" class="noTextDec textWhite">Committee</a>
+                            </li>
+
+                            <li>
+                                <div class="flex flexRow justifyBetween">
+                                    <a href="lands.html#" class="noTextDec textWhite">Projects</a>
+                                    <div tabindex="0" class="flex flexRow filler">
+                                        <div class="filler noOpacity">_</div>
+                                        <div class="arrowDD textWhite">></div>        
+                                    </div>
+                                </div>
+
+                                <ul class="navbarSubMenu">
+                                    <li>
+                                        <a href="lands.html#" class="noTextDec textWhite">Land Use Plan</a>
+                                    </li>
+
+                                    <li>
+                                        <a href="lands.html#" class="noTextDec textWhite">Solid Waste</a>
+                                    </li>
+
+                                    <li>
+                                        <a href="lands.html#" class="noTextDec textWhite">Legacy Issues</a>
+                                    </li>
+
+                                    <li>
+                                        <a href="lands.html#" class="noTextDec textWhite">Habitat Restoration</a>
+                                    </li>
+
+                                    <li>
+                                        <a href="lands.html#" class="noTextDec textWhite">Wildfire Resiliency Plan</a>
+                                    </li>
+
+                                    <li>
+                                        <a href="lands.html#" class="noTextDec textWhite">Environmental Clean Up</a>
+                                    </li>
+                                </ul>
+                            </li>
+
+                            <li>
+                                <a href="lands.html#" class="noTextDec textWhite">Land Code, Law & Other</a>
+                            </li>
+
+                            <li>
+                                <a href="lands.html#" class="noTextDec textWhite">Staff & Contact</a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li class="flex">
+                        <div class="flex flexRow justifyBetween">
+                            <a href="council.html" class="navbarContent">COUNCIL</a>
+                            <div tabindex="0" class="flex flexRow filler">
+                                <div class="filler noOpacity">_</div>
+                                <div class="arrowDD textWhite">></div>
+                            </div>
+                        </div>
+
+                        <ul class="navbarSubMenu">
+                            <li>
+                                <a href="council.html#councilED" class="noTextDec textWhite">Economic Development</a>
+                            </li>
+
+                            <li>
+                                <a href="council.html#councilCC" class="noTextDec textWhite">Colonial Claim</a>
+                            </li>
+
+                            <li>
+                                <a href="council.html#councilCC" class="noTextDec textWhite">Governance</a>
+                            </li>
+
+                            <li>
+                                <a href="council.html#councilCC" class="noTextDec textWhite">Portfolios</a>
+                            </li>
+
+                            <li>
+                                <a href="council.html#councilCC" class="noTextDec textWhite">Council Index</a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li class="flex">
+                        <div class="flex flexRow justifyBetween">
+                            <a href="contact.html" class="navbarContent">CONTACTS</a>
+                            <div tabindex="0" class="flex flexRow filler">
+                                <div class="filler noOpacity">_</div>
+                                <div class="arrowDD textWhite">></div>
+                            </div>
+                        </div>
+
+                        <ul class="navbarSubMenu">
+                            <li>
+                                <a href="contact.html" class="noTextDec textWhite">Band Office</a>
+                            </li>
+
+                            <li>
+                                <a href="contact.html#contactBO" class="noTextDec textWhite">Health Office</a>
+                            </li>
+
+                            <li>
+                                <a href="contact.html#contactHO" class="noTextDec textWhite">Other</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
         </nav>    
-    </div>  
+    </div>
+
+    <header class="blue">
+        <a href="index.html">
+            <img class="mainLogo" src="pictures/logo's/logo_march_7.gif">
+        </a>
+
+        <div class="pageTitles bold">
+            <a href="index.html" class="aboreto whiteText textDec textShadowB">
+                SOOWAHLIE FIRST NATION
+            </a>
+
+            <a href="index.html" class="altName aboreto whiteText textDec textShadowB">
+                Th'éwá:lí
+            </a>
+        </div>
+    </header>  
 
     <main>
-        <div class="mainHeight blue flex">
-            <img src="pictures/lands/SoowahlieLandsMap.jpg" alt="" width="500" class="landsImage">
+        <div class="mainHeight blue flex" id="landsSL">
+            <img src="pictures/lands/SoowahlieLandsMap.jpg" alt="" height="400" class="landsImage">
             <div class="notoSerif whiteText">
-                <h2 class="mainHeader">Th'ewa:lí Téméxw (Soowahlie Lands)</h2>
+                <h2 class="mainHeader underline">Th'ewa:lí Téméxw (Soowahlie Lands)</h2>
                 <p class="mainText mainTextMargin">
                     Soowahlie First Nation is 1018 acres in size, and located south of the City of Chilliwack and north of Cultus Lake within the Fraser Valley. 
                     Currently there are approximately over 400 people living in 84 homes. 
@@ -146,9 +332,9 @@
             </div>
         </div>
 
-        <div class="mainHeight midnight flex">
+        <div class="mainHeight midnight flex" id="landsLC">
             <div class="notoSerif whiteText">
-                <h2 class="mainHeader">Land Code</h2>
+                <h2 class="mainHeader underline">Land Code</h2>
                 <p class="mainText mainTextMargin">
                     Soowahlie votes yes to the Land Code in 2016
                 </p>
@@ -160,54 +346,128 @@
                     Lands activities include land registrations, surveys, permits, development of laws, policies and procedures, environmental management, and enforcement.
                 </p>
             </div>
-            <img src="pictures/lands/LandCodeQuote.jpg" alt="" width="500" class="landsImage">
+            <img src="pictures/lands/LandCodeQuote.jpg" alt="" height="350" class="landsImage">
         </div>
 
-        <div class="mainHeight blue">
+        <div class="mainHeight blue" id="landsCommittee">
             <div class="notoSerif whiteText">
-                <h2 class="mainHeader">Committee</h2>
+                <h2 class="mainHeader underline">Lands Committee</h2>
                 <p class="mainText">
                     The Soowahlie Lands Advisory Committee includes a broad representation of the main family groups, elders, and youth. 
                     As outlines in the Land Code, the committees roles and responsibilities are to be the voice of their families with lands related administration, recommendations to council decision making, etc.
                 </p>
 
-
-                <!-- add committee images and bios -->
-
-
+                <div class="staffContacts">
+                    <ul>
+                        <li>
+                            <div class="staffPic">picture</div>
+                            <h2 class="staffName bold">Juliette Peters</h2>
+                            <!-- <h3 class="staffTitle bold">Community Coordinator</h3> -->
+                            <!-- <p class="staffInfo">Phone: 604-858-4631</p> -->
+                            <!-- <p class="staffInfo">Email: reception@soowahlie.ca</p> -->
+                        </li>
+    
+                        <li>
+                            <div class="staffPic">picture</div>
+                            <h2 class="staffName bold">Kevin Kelly</h2>
+                            <!-- <h3 class="staffTitle bold">Community Coordinator</h3> -->
+                            <!-- <p class="staffInfo">Phone: 604-858-4631</p> -->
+                            <!-- <p class="staffInfo">Email: reception@soowahlie.ca</p> -->
+                        </li>
+    
+                        <li>
+                            <div class="staffPic">picture</div>
+                            <h2 class="staffName bold">Tanya Commodore</h2>
+                            <!-- <h3 class="staffTitle bold">Community Coordinator</h3> -->
+                            <!-- <p class="staffInfo">Phone: 604-858-4631</p> -->
+                            <!-- <p class="staffInfo">Email: reception@soowahlie.ca</p> -->
+                        </li>
+    
+                        <li>
+                            <div class="staffPic">picture</div>
+                            <h2 class="staffName bold">Sophinia</h2>
+                            <!-- <h3 class="staffTitle bold">Community Coordinator</h3> -->
+                            <!-- <p class="staffInfo">Phone: 604-858-4631</p> -->
+                            <!-- <p class="staffInfo">Email: reception@soowahlie.ca</p> -->
+                        </li>
+    
+                        <li>
+                            <div class="staffPic">picture</div>
+                            <h2 class="staffName bold">Laura</h2>
+                            <!-- <h3 class="staffTitle bold">Community Coordinator</h3> -->
+                            <!-- <p class="staffInfo">Phone: 604-858-4631</p> -->
+                            <!-- <p class="staffInfo">Email: reception@soowahlie.ca</p> -->
+                        </li>
+    
+                        <li>
+                            <div class="staffPic">picture</div>
+                            <h2 class="staffName bold">Tosha</h2>
+                            <!-- <h3 class="staffTitle bold">Community Coordinator</h3> -->
+                            <!-- <p class="staffInfo">Phone: 604-858-4631</p> -->
+                            <!-- <p class="staffInfo">Email: reception@soowahlie.ca</p> -->
+                        </li>
+    
+                        <li>
+                            <div class="staffPic">picture</div>
+                            <h2 class="staffName bold">Nikki Bordignon</h2>
+                            <!-- <h3 class="staffTitle bold">Community Coordinator</h3> -->
+                            <!-- <p class="staffInfo">Phone: 604-858-4631</p> -->
+                            <!-- <p class="staffInfo">Email: reception@soowahlie.ca</p> -->
+                        </li>
+    
+                        <li>
+                            <div class="staffPic">picture</div>
+                            <h2 class="staffName bold">Austin Douglas</h2>
+                            <!-- <h3 class="staffTitle bold">Community Coordinator</h3> -->
+                            <!-- <p class="staffInfo">Phone: 604-858-4631</p> -->
+                            <!-- <p class="staffInfo">Email: reception@soowahlie.ca</p> -->
+                        </li>
+                    </ul>
+                </div>
+                
             </div>
         </div>
 
-        <h2 class="projectsHeader mainHeader midnight notoSerif whiteText">Projects</h2>
-        <div class="mainHeight midnight flex notoSerif whiteText">
-            <img src="pictures/lands/LandUsePlan.jpg" alt="" width="500" class="landsImage separator">
-            <div class="separator">
-                <h3 class="mainSubHeader">Land Use Plan</h3>
-                <p class="mainText mainTextMargin">
-                    Soowahlie received funding to create a Land Use Plan. 
-                    This plan would designate areas of Soowahlie for different uses like commercial, residential, mixed use, etc. 
-                    Through the course of 2-3 years, we did a lot of community engagement to gather the wishes of the community. 
-                    Dillon Consulting has taken that information a created a beautiful draft plan that will need to go to a membership vote to approve.
-                </p>
+        <div class="mainHeight midnight notoSerif whiteText" id="landsProjects">
+            <h2 class="mainHeader underline">Projects</h2>
+            <div class="flex" id="landsLUP">
+                <img src="pictures/lands/LandUsePlan.jpg" alt="" height="400" class="landsImage separator">
+                <div class="separator">
+                    <h3 class="mainSubHeader underline">Land Use Plan</h3>
+                    <p class="mainText mainTextMargin">
+                        Soowahlie received funding to create a Land Use Plan. 
+                        This plan would designate areas of Soowahlie for different uses like commercial, residential, mixed use, etc. 
+                        Through the course of 2-3 years, we did a lot of community engagement to gather the wishes of the community. 
+                        Dillon Consulting has taken that information a created a beautiful draft plan that will need to go to a membership vote to approve.
+                    </p>
+                </div>
             </div>
-        </div>
+        </div>  
 
-        <div class="mainHeight midnight flex notoSerif whiteText">
+        <div class="mainHeight midnight flex notoSerif whiteText" id="landsSW">
             <div class="notoSerif whiteText separator">
-                <h3 class="mainSubHeader">Solid Waste</h3>
+                <h3 class="mainSubHeader underline">Solid Waste</h3>
                 <p class="mainText mainTextMargin">
                     Soowahlie received funding for Solid Waste Management. 
                     We used a theme of “removing barriers” as inspiration for this project. 
                     This included an addition of a cardboard bin by our community garbage bins, purchased roll out bins for each home for garbage day, 4 recycling bins for each home for sorting recycling at home, and educational magnets to remind everyone about recycling.
                 </p>
             </div>
-            <img src="pictures/lands/LockedUpBins.jpg" alt="" width="500" class="landsImage separator">
+
+            <div class="pic-ctn separator">
+                <img src="pictures/lands/Solid Waste 1.jpg" alt="" class="pic">
+                <img src="pictures/lands/Solid Waste 2.jpg" alt="" class="pic">
+                <img src="pictures/lands/Solid Waste 3.jpg" alt="" class="pic">
+                <img src="pictures/lands/Solid Waste 4.jpg" alt="" class="pic">
+                <img src="pictures/lands/Solid Waste 5.jpg" alt="" class="pic">
+            </div>
         </div>
 
         <div class="mainHeight midnight flex notoSerif whiteText">
-            <img src="" alt="" width="500" class="landsImage separator">
+            <img src="pictures/lands/Legacy Issues Boundary Monument.jpg" alt="" height="400" class="landsImage separator">
+            <img src="pictures/lands/Legacy Issues Lands Boundary.jpg" alt="" height="400" class="landsImage separator">
             <div class="separator">
-                <h3 class="mainSubHeader">Legacy Issues</h3>
+                <h3 class="mainSubHeader underline">Legacy Issues</h3>
                 <p class="mainText mainTextMargin">
                     Since entering Land Code, we found that there were a lot of unresolved issues all over Soowahlie. 
                     We successfully received funding to start dealing with some of these issues and hire another staff to assist. 
@@ -218,19 +478,19 @@
 
         <div class="mainHeight midnight flex notoSerif whiteText">
             <div class="separator">
-                <h3 class="mainSubHeader">Habitat Restoration</h3>
+                <h3 class="mainSubHeader underline">Habitat Restoration</h3>
                 <p class="mainText mainTextMargin">
                     Soowahlie is working with LFFA (Lower Fraser Valley Fishing Alliance) on a habitat restoration plan. 
                     This project will assess current habitat areas and create a restoration plan for applying for further funding. 
                 </p>
             </div>
-            <img src="pictures/lands/Habitat Restoration.jpg" alt="" width="500" class="landsImage separator">
+            <img src="pictures/lands/Habitat Restoration.jpg" alt="" width="500" height="400" class="landsImage separator cover">
         </div>
 
         <div class="mainHeight midnight flex notoSerif whiteText">
-            <img src="" alt="" width="500" class="landsImage separator">
+            <img src="pictures/lands/Wildfire Resiliency Plan.jpg" alt="" width="500" height="400" class="landsImage separator">
             <div class="separator">
-                <h3 class="mainSubHeader">Wildfire Resiliency Plan</h3>
+                <h3 class="mainSubHeader underline">Wildfire Resiliency Plan</h3>
                 <p class="mainText mainTextMargin">
                     With the increase of wildfires over that past few years and growing concerns with impacts to our forested land, we've received funding to work with Frontera Firesolutions to create a wildfire resiliency plan for Soowahlie.
                 </p>
@@ -239,16 +499,16 @@
 
         <div class="mainHeight midnight flex notoSerif whiteText">
             <div>
-                <h3 class="mainSubHeader">Environmental Clean Up</h3>
+                <h3 class="mainSubHeader underline">Environmental Clean Up</h3>
                 <p class="mainText mainTextMargin">
                     Clean up of environmentally contaminated sites from fires at the river.
                 </p>
             </div>
-            <img src="" alt="" width="500" class="landsImage">
+            <img src="pictures/lands/Environmental Clean Up.jpg" alt="" width="500" class="landsImage">
         </div>
 
         <div class="mainHeight white">
-            <h2 class="notoSerif mainHeader">Land Code, Laws & Other</h2>
+            <h2 class="notoSerif mainHeader underlineB">Land Code, Laws & Other</h2>
             <table class="landsTable">
                 <tr>
                     <th>Forms</th>
@@ -330,8 +590,8 @@
             </table>
         </div>
 
-        <div class="mainHeight white">
-            <h2 class="notoSerif mainHeader">Staff / Contact</h2>
+        <div class="mainHeight blue whiteText">
+            <h2 class="notoSerif mainHeader underline">Staff / Contact</h2>
             <div class="landsStaff notoSerif">
                 <div>
                     <p class="bold mainSubHeader">Juliette Peters</p>
@@ -352,9 +612,11 @@
                 </div>
             </div>
         </div>
+    </main>
 
-        <div class="contactHeight contactTab textShadowB">
-            <div class="contactSections">
+    <footer>
+        <div class="smallTBPadding flex centerTA spaceBetween footerContacts whiteText textShadowB">
+            <div class="smallSidePadding footerContactInfo footerLeft">
                 <h3>
                     Band Office
                 </h3>
@@ -370,7 +632,7 @@
                 </p>
             </div>
 
-            <div class="contactSections">
+            <div class="smallSidePadding footerContactInfo footerRight">
                 <h3>
                     Health Office
                 </h3>
@@ -386,17 +648,17 @@
                 </p>
             </div>
         </div>
-        
-    </main>
 
-    <footer>
-        <p class="footerLeft">
-            Soowahlie First Nation © 2022 All Rights Reserved
-        </p>
 
-        <p class="footerRight">
-            Designed and Maintained by Band Member Joel Kelly
-        </p>
+        <div class="smallSidePadding centerTA spaceBetween whiteText flex copyright">
+            <p class="footerLeft">
+                Soowahlie First Nation © 2022 All Rights Reserved
+            </p>
+    
+            <p class="footerRight">
+                Designed and Maintained by Band Member Joel Kelly
+            </p>
+        </div>
     </footer>
 </body>
 

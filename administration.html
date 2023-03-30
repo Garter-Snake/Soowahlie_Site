@@ -1,171 +1,734 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-<head>
-    <meta charset="utf-8">
-    <title>Administration</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="icon" href="pictures/logo's/logo_march_7.gif">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@1,300&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Aboreto&family=Roboto:wght@100&display=swap" rel="stylesheet">
-</head>
+    <head>
+        <meta charset="utf-8">
+        <!-- added new meta tag for mobile -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Administration</title>
+        <link rel="stylesheet" href="styles.css">
+        <link rel="icon" href="pictures/logo's/logo_march_7.gif">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@1,300&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Aboreto&family=Roboto:wght@100&display=swap" rel="stylesheet">
+    </head>
 
 <body>
-    <div class="pageTop blue">
-        <header>
-            <a href="index.html">
-                <img class="mainLogo" src="pictures/logo's/logo_march_7.gif">
-            </a>
+    <div class="sticky navWrapper midnight">
+        <nav>
+            <input type="checkbox" name="navControl" id="nav-control" class="hidden">
+            <label for="nav-control" class="flex justifyBetween">
+                <div class="flex centerAI burgerWrapper">
+                    <div class="hamburger"></div>
+                    <div class="hamburger patty"></div>
+                    <div class="hamburger"></div>
+                </div>
 
-            <div class="pageTitles bold">
-                <a href="index.html" class="aboreto textShadowB">
-                    SOOWAHLIE FIRST NATION
+                <a href="index.html" class="flex centerAI mainHeader whiteText textDec navbarTitle">
+                    Soowahlie
                 </a>
-
-                <a class="altName aboreto textShadowB" href="index.html">
-                    Th'ewa:li
-                </a>
-            </div>
-        </header>
-    </div>
-
-    <div class="sticky">
-        <nav class="navbar bold midnight">
-            <a href="index.html" class="homeIcon">
-                <img src="pictures/logo's/logo_march_7.gif" width="32px">
-            </a>
-
-            <ul>
-                <li class="navbarDropdown merriweatherHeader">
-                    <a class="navbarContent" href="about.html">ABOUT</a>
-                    <div class="dropdownContent merriweatherDD">
-                        <a href="about.html#aboutVH">Soowahlie Vision and History</a>
-                        <a href="about.html#aboutStaff">Staff</a>
-                    </div>
-                </li>
-
-                <li class="navbarDropdown merriweatherHeader">
-                    <a class="navbarContent" href="community.html">COMMUNITY</a>
-                    <div class="dropdownContent merriweatherDD">
-                        <a href="community.html#cmElders">Elders</a>
-                        <a href="community.html#cmYouth">Youth</a>
-                        <a href="community.html#cmCC">Community Coordinator</a>
-                        <a href="community.html#cmUE">Upcoming Events</a>
-                        <a href="community.html#cmLJ">Lady Jane</a>
-                        <a href="community.html#cmSuccesses">Successes</a>
-                    </div>
-                </li>
-
-                <li class="navbarDropdown merriweatherHeader">
-                    <a class="navbarContent" href="administration.html">ADMINISTRATION</a>
-                    <div class="dropdownContent merriweatherDD">
-                        <a href="administration.html#adminManagement">Management</a>
-                        <a href="administration.html#adminEM">Emergency Management</a>
-                        <a href="administration.html#adminEducation">Education</a>
-                        <a href="administration.html#adminHousing">Housing</a>
-                        <a href="administration.html#adminPWM">Public Works/ Maintenance</a>
-                        <a href="administration.html#adminSA">Social Assistance</a>
-                    </div>
-                </li>     
-
-                <li class="navbarDropdown merriweatherHeader">
-                    <a class="navbarContent" href="health.html">HEALTH</a>
-                    <div class="dropdownContent merriweatherDD">
-                        <a href="health.html#healthHD">Health Director</a>
-                        <a href="health.html#healthNP">Nurse Practitioner</a>
-                        <a href="health.html#healthCN">Community Nurse</a>
-                        <a href="health.html#healthDA">Drug & Alcohol</a>
-                        <a href="health.html#healthNutritionist">Nutritionist</a>
-                        <a href="health.html#healthCounselling">Counselling</a>
-                        <a href="health.html#healthPG">Parent Group</a>
-                        <a href="health.html#healthHO">Health Office</a>
-                        <a href="health.html#healthHC">Health Committee</a>
-                    </div>
-                </li>
     
-                <li class="navbarDropdown merriweatherHeader">
-                    <a class="navbarContent" href="lands.html">LANDS</a>
-                    <div class="dropdownContent merriweatherDD">
-                        <a href="lands.html#">Soowahlie Lands</a>
-                        <a href="lands.html#">Land Code</a>
-                        <a href="lands.html#">Committee</a>
-                        <div class="submenuDropdown">
-                            <a href="lands.html#"><span>Projects</span></a>
-                            <div class="navbarSubMenu">
-                                <a href="lands.html#">Land Use Plan</a>
-                                <a href="lands.html#">Solid Waste</a>
-                                <a href="lands.html#">Legacy Issues</a>
-                                <a href="lands.html#">Habitat Restoration</a>
-                                <a href="lands.html#">Wildfire Resiliency Plan</a>
-                                <a href="lands.html#">Environmental Clean Up</a>
+                <a href="index.html" class="flex centerAI homeIcon">
+                    <img src="pictures/logo's/logo_march_7.gif" width="32px">
+                </a>
+            </label>
+
+            <div class="navbar navItems flex">
+                <ul>
+                    <li class="flex">
+                        <div class="flex flexRow justifyBetween">
+                            <a href="about.html" class="navbarContent">ABOUT</a>
+                            <div tabindex="0" class="flex flexRow filler">
+                                <div class="filler noOpacity">_</div>
+                                <div class="arrowDD textWhite">></div>
                             </div>
                         </div>
-                        <a href="lands.html#">Land Code, Law & Other</a>
-                        <a href="lands.html#">Staff & Contact</a>
-                    </div>
-                </li>
-                    
-                <li class="navbarDropdown merriweatherHeader">
-                    <a class="navbarContent" href="council.html">COUNCIL</a>
-                    <div class="dropdownContent merriweatherDD">
-                        <a href="council.html#councilED">Economic Development</a>
-                        <a href="council.html#councilCC">Colonial Claim</a>
-                        <a href="council.html#councilCC">Governance</a>
-                        <a href="council.html#councilCC">Portfolios</a>
-                        <a href="council.html#councilCC">Council Index</a>
-                    </div>
-                </li>
-    
-                <li class="navbarDropdown merriweatherHeader">
-                    <a class="navbarContent" href="contact.html">CONTACTS</a>
-                    <div class="dropdownContent merriweatherDD">
-                        <a href="contact.html#contactBO">Band Office</a>
-                        <a href="contact.html#contactHO">Health Office</a>
-                        <a href="#">Other</a>
-                    </div>
-                </li>
-            </ul>
 
-            <button type="button">Login</button>
+                        <ul class="navbarSubMenu">
+                            <li>
+                                <a href="about.html#aboutVH" class="noTextDec textWhite">Soowahlie Vision and History</a>
+                            </li>
+
+                            <li>
+                                <a href="about.html#aboutStaff" class="noTextDec textWhite">Staff</a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li class="flex">
+                        <div class="flex flexRow justifyBetween">
+                            <a href="community.html" class="navbarContent">COMMUNITY</a>
+                            <div tabindex="0" class="flex flexRow filler">
+                                <div class="filler noOpacity">_</div>
+                                <div class="arrowDD textWhite">></div>
+                            </div>
+                        </div>
+
+                        <ul class="navbarSubMenu">
+                            <li>
+                                <a href="community.html#cmElders" class="noTextDec textWhite">Elders</a>
+                            </li>
+
+                            <li>
+                                <a href="community.html#cmYouth" class="noTextDec textWhite">Youth</a>
+                            </li>
+
+                            <li>
+                                <a href="community.html#cmCC" class="noTextDec textWhite">Community Coordinator</a>
+                            </li>
+
+                            <li>
+                                <a href="community.html#cmUE" class="noTextDec textWhite">Upcoming Events</a>
+                            </li>
+
+                            <li>
+                                <a href="community.html#cmLJ" class="noTextDec textWhite">Lady Jane</a>
+                            </li>
+
+                            <li>
+                                <a href="community.html#cmSuccesses" class="noTextDec textWhite">Successes</a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li class="flex">
+                        <div class="flex flexRow justifyBetween">
+                            <a href="administration.html" class="navbarContent">ADMINISTRATION</a>
+                            <div tabindex="0" class="flex flexRow filler">
+                                <div class="filler noOpacity">_</div>
+                                <div class="arrowDD textWhite">></div>
+                            </div>
+                        </div>
+
+                        <ul class="navbarSubMenu">
+                            <li>
+                                <a href="administration.html#adminManagement" class="noTextDec textWhite">Management</a>
+                            </li>
+
+                            <li>
+                                <a href="administration.html#adminEM" class="noTextDec textWhite">Emergency Management</a>
+                            </li>
+
+                            <li>
+                                <a href="administration.html#adminEducation" class="noTextDec textWhite">Education</a>
+                            </li>
+
+                            <li>
+                                <a href="administration.html#adminHousing" class="noTextDec textWhite">Housing</a>
+                            </li>
+
+                            <li>
+                                <a href="administration.html#adminPWM" class="noTextDec textWhite">Public Works/ Maintenance</a>
+                            </li>
+
+                            <li>
+                                <a href="administration.html#adminSA" class="noTextDec textWhite">Social Assistance</a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li class="flex">
+                        <div class="flex flexRow justifyBetween">
+                            <a href="health.html" class="navbarContent">HEALTH</a>
+                            <div tabindex="0" class="flex flexRow filler">
+                                <div class="filler noOpacity">_</div>
+                                <div class="arrowDD textWhite">></div>
+                            </div>
+                        </div>
+
+                        <ul class="navbarSubMenu">
+                            <li>
+                                <a href="health.html#healthHD" class="noTextDec textWhite">Health Director</a>
+                            </li>
+
+                            <li>
+                                <a href="health.html#healthNP" class="noTextDec textWhite">Nurse Practitioner</a>
+                            </li>
+
+                            <li>
+                                <a href="health.html#healthCN" class="noTextDec textWhite">Community Nurse</a>
+                            </li>
+
+                            <li>
+                                <a href="health.html#healthDA" class="noTextDec textWhite">Drug & Alcohol</a>
+                            </li>
+
+                            <li>
+                                <a href="health.html#healthNutritionist" class="noTextDec textWhite">Nutritionist</a>
+                            </li>
+
+                            <li>
+                                <a href="health.html#healthCounselling" class="noTextDec textWhite">Counselling</a>
+                            </li>
+
+                            <li>
+                                <a href="health.html#healthPG" class="noTextDec textWhite">Parent Group</a>
+                            </li>
+
+                            <li>
+                                <a href="health.html#healthHO" class="noTextDec textWhite">Health Office</a>
+                            </li>
+
+                            <li>
+                                <a href="health.html#healthHC" class="noTextDec textWhite">Health Committee</a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li class="flex">
+                        <div class="flex flexRow justifyBetween">
+                            <a href="lands.html" class="navbarContent">LANDS</a>
+                            <div tabindex="0" class="flex flexRow filler">
+                                <div class="filler noOpacity">_</div>
+                                <div class="arrowDD textWhite">></div>
+                            </div>
+                        </div>
+
+                        <ul class="navbarSubMenu">
+                            <li>
+                                <a href="lands.html#" class="noTextDec textWhite">Soowahlie Lands</a>
+                            </li>
+
+                            <li>
+                                <a href="lands.html#" class="noTextDec textWhite">Land Code</a>
+                            </li>
+
+                            <li>
+                                <a href="lands.html#" class="noTextDec textWhite">Committee</a>
+                            </li>
+
+                            <li>
+                                <div class="flex flexRow justifyBetween">
+                                    <a href="lands.html#" class="noTextDec textWhite">Projects</a>
+                                    <div tabindex="0" class="flex flexRow filler">
+                                        <div class="filler noOpacity">_</div>
+                                        <div class="arrowDD textWhite">></div>        
+                                    </div>
+                                </div>
+
+                                <ul class="navbarSubMenu">
+                                    <li>
+                                        <a href="lands.html#" class="noTextDec textWhite">Land Use Plan</a>
+                                    </li>
+
+                                    <li>
+                                        <a href="lands.html#" class="noTextDec textWhite">Solid Waste</a>
+                                    </li>
+
+                                    <li>
+                                        <a href="lands.html#" class="noTextDec textWhite">Legacy Issues</a>
+                                    </li>
+
+                                    <li>
+                                        <a href="lands.html#" class="noTextDec textWhite">Habitat Restoration</a>
+                                    </li>
+
+                                    <li>
+                                        <a href="lands.html#" class="noTextDec textWhite">Wildfire Resiliency Plan</a>
+                                    </li>
+
+                                    <li>
+                                        <a href="lands.html#" class="noTextDec textWhite">Environmental Clean Up</a>
+                                    </li>
+                                </ul>
+                            </li>
+
+                            <li>
+                                <a href="lands.html#" class="noTextDec textWhite">Land Code, Law & Other</a>
+                            </li>
+
+                            <li>
+                                <a href="lands.html#" class="noTextDec textWhite">Staff & Contact</a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li class="flex">
+                        <div class="flex flexRow justifyBetween">
+                            <a href="council.html" class="navbarContent">COUNCIL</a>
+                            <div tabindex="0" class="flex flexRow filler">
+                                <div class="filler noOpacity">_</div>
+                                <div class="arrowDD textWhite">></div>
+                            </div>
+                        </div>
+
+                        <ul class="navbarSubMenu">
+                            <li>
+                                <a href="council.html#councilED" class="noTextDec textWhite">Economic Development</a>
+                            </li>
+
+                            <li>
+                                <a href="council.html#councilCC" class="noTextDec textWhite">Colonial Claim</a>
+                            </li>
+
+                            <li>
+                                <a href="council.html#councilCC" class="noTextDec textWhite">Governance</a>
+                            </li>
+
+                            <li>
+                                <a href="council.html#councilCC" class="noTextDec textWhite">Portfolios</a>
+                            </li>
+
+                            <li>
+                                <a href="council.html#councilCC" class="noTextDec textWhite">Council Index</a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li class="flex">
+                        <div class="flex flexRow justifyBetween">
+                            <a href="contact.html" class="navbarContent">CONTACTS</a>
+                            <div tabindex="0" class="flex flexRow filler">
+                                <div class="filler noOpacity">_</div>
+                                <div class="arrowDD textWhite">></div>
+                            </div>
+                        </div>
+
+                        <ul class="navbarSubMenu">
+                            <li>
+                                <a href="contact.html" class="noTextDec textWhite">Band Office</a>
+                            </li>
+
+                            <li>
+                                <a href="contact.html#contactBO" class="noTextDec textWhite">Health Office</a>
+                            </li>
+
+                            <li>
+                                <a href="contact.html#contactHO" class="noTextDec textWhite">Other</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
         </nav>    
-    </div> 
+    </div>
+
+    <header class="blue">
+        <a href="index.html">
+            <img class="mainLogo" src="pictures/logo's/logo_march_7.gif">
+        </a>
+
+        <div class="pageTitles bold">
+            <a href="index.html" class="aboreto whiteText textDec textShadowB">
+                SOOWAHLIE FIRST NATION
+            </a>
+
+            <a href="index.html" class="altName aboreto whiteText textDec textShadowB">
+                Th'éwá:lí
+            </a>
+        </div>
+    </header> 
 
     <main>
-        <div class="mainHeight white">
-            intro to Administration
+        <div class="smallSidePadding smallTBPadding midnight white">
+            <div class="mainTextPadding mainText mainTextSidePadding notoSerif whiteText">
+                <h2 class="mainHeader underline">Intro to Administration</h2>
+                <p class="mainTextPadding mainText">
+                    Soowahlie First Nation employs up to 30 people at a time. 
+                    The Band Manager is the person who oversees all the duties of the staff on a day to day basis.
+                    The Band Manager also looks after the financial side of the band.
+                    The Band Office also has a Receptionist, a Land Code Coordinator, and a Maintenance Worker. 
+                    The Health Office staff are listed in the Health Section of the plan. 
+                    The other employees come from the Sweltzer Creek Campground, which is Soowahlie First Nation's Campsite. 
+                    In order to make business run as usual, all the staff in both offices have to work well with each other and the entire community.
+                </p>
+
+                <p class="mainTextPadding mainText">
+                    For the amount of work that needs to be done for Soowahlie, it feels like we don't have enough staff some of the time. 
+                    The staff usually have to do multiple jobs to try to make everything run smoothly. 
+                    The current staff work very well together and everyone gets along very well. 
+                    They are dedicated to Soowahlie, and will usually help out the community in any way they can. 
+                    They are always looking out for opportunities that would advance Soowahlie. 
+                </p>
+
+                <p class="mainTextPadding mainText">
+                    The Band Administrator who oversees the organization and it the Band Administration also does the Financial Management. 
+                    Brenda Wallace has been in this position for several years. 
+                    There is administration staff, Lands staff and the Housing staff in the Administration building. 
+                    Next door there is a Health office building with health staff and the Income Assistance/Education staff member.
+                </p>
+            </div>
         </div>
 
-        <div class="mainHeight blue" id="adminManagement">
-            Management
-        </div>
-        
-        <div class="mainHeight white" id="adminEM">
-            Emergency Management
+        <div class="mainTextPadding smallSidePadding smallTBPadding mainHeight blue notoSerif whiteText" id="adminManagement">
+            <h2 class="mainHeader underline">
+                Management
+                <span id="" class="anchor"></span>
+            </h2>
+
+            <div class="flex mobileColumn desktopRow">
+                <!-- <div class="fortyWidth">
+                    <img src="" alt="" class="responsiveImage imagePadding vertCenter">
+                </div> -->
+
+                <div class="notoSerif whiteText sixtyWidth">
+                    <p class="mainTextPadding mainText">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi minus fugit obcaecati doloribus necessitatibus. Est aspernatur nihil soluta asperiores dicta dolores aperiam et labore? Nostrum iure harum repellendus dolorem amet.
+                    </p>
+                </div>
+            </div>
         </div>
 
-        <div class="mainHeight blue" id="adminCC">
-            Community Coordinator
+        <div class="mainTextPadding smallSidePadding smallTBPadding mainHeight midnight notoSerif whiteText" id="adminEM">
+            <h2 class="mainHeader underline">
+                Emergency Management
+                <span id="" class="anchor"></span>
+            </h2>
+
+            <div class="flex mobileColumn desktopRow">
+                <!-- <div class="fortyWidth">
+                    <img src="" alt="" class="responsiveImage imagePadding vertCenter">
+                </div> -->
+
+                <div class="notoSerif whiteText sixtyWidth">
+                    <p class="mainTextPadding mainText">
+                        Build, sustain and improve capability to mitigate against, prepare for, respond to, and recover from emergencies 
+                        or natural disasters. Create and update communities Emergency Plan. 
+                        Identifying communities' risks and vulnerabilities.
+                    </p>
+                </div>
+            </div>
         </div>
 
-        <div class="mainHeight white" id="adminEducation">
-            Education
+        <div class="mainTextPadding smallSidePadding smallTBPadding mainHeight blue notoSerif whiteText" id="adminEM">
+            <h2 class="mainHeader underline">
+                Community Coordinator
+                <span id="" class="anchor"></span>
+            </h2>
+
+            <div class="flex mobileColumn desktopRow">
+                <!-- <div class="fortyWidth">
+                    <img src="" alt="" class="responsiveImage imagePadding vertCenter">
+                </div> -->
+
+                <div class="notoSerif whiteText sixtyWidth">
+                    <p class="mainTextPadding mainText">
+                        Build, sustain and improve capability to mitigate against, prepare for, respond to, and recover from emergencies 
+                        or natural disasters. Create and update communities Emergency Plan. 
+                        Identifying communities' risks and vulnerabilities.
+                    </p>
+                </div>
+            </div>
         </div>
 
-        <div class="mainHeight blue" id="adminHousing">
-            Housing
+        <div class="mainTextPadding smallSidePadding smallTBPadding mainHeight midnight notoSerif whiteText" id="adminEM">
+            <h2 class="mainHeader underline">
+                Education
+                <span id="" class="anchor"></span>
+            </h2>
+
+            <div class="flex mobileColumn desktopRow">
+                <!-- <div class="fortyWidth">
+                    <img src="" alt="" class="responsiveImage imagePadding vertCenter">
+                </div> -->
+
+                <div class="notoSerif whiteText sixtyWidth">
+                    <ul class="mainText mainTextMargin bulletList">
+                        <li>
+                            Provides services for students in Elementary, Middle, Secondary and Post-Secondary school
+                        </li>
+    
+                        <li>
+                            Ensuring Local Education Agreement is maintained
+                        </li>
+    
+                        <li>
+                            Working with teachers to provide on going support, when needed
+                        </li>
+    
+                        <li>
+                            Process and intake of Post-Secondary applications
+                        </li>
+    
+                        <li>
+                            Annual post-secondary education registry report and nominal roll registry report for Indigenous Services Canada
+                        </li>
+    
+                        <li>
+                            Monthly Indigenous Education Advisory Committee meeting
+                        </li>
+    
+                        <li>
+                            Organize and plan Graduation Celebration Ceremony
+                        </li>
+    
+                        <li>
+                            organize funding and creating events for k-12 students
+                        </li>
+    
+                        <li>
+                            Engage in training sessions for updated policies and new curriculums work in a variety of fields to develop learning programs for students
+                        </li>
+    
+                        <li>
+                            Evaluate the existing curriculum and develop innovative solutions to improve student outcomes
+                        </li>
+                    </ul>
+
+                    <p class="mainTextPadding mainText">
+                        The people of Soowahlie First Nation are becoming more educated as a people. 
+                        From the youth to the adults, to the Chief and Council, to the Elders, the people are learning more both formally in and out of school. 
+                        Education is a very important thing if you want your community to move forward in this generation.
+                    </p>
+
+                    <p class="mainTextPadding mainText">
+                        In the elementary, middle, and secondary school education systems there is more First Nations recognition. 
+                        A part of that recognition is the increase in First Nations-based curriculum. 
+                        Even in the University of the Fraser Valley there is a First Nation support system that can be utilized by the university students from Soowahlie.
+                    </p>
+    
+                    <p class="mainTextPadding mainText">
+                        Soowahlie has taken control of the Education Program funding it receives from the government. 
+                        This allows them to hire education worker to distribute the funding to the different levels of schooling. 
+                        Having a full-time education worker is very useful because they can get to know the wants and needs of the Soowahlie parents and children. 
+                        Taking control of the funding lets Soowahlie set out its own guidelines for who receives funding for University and other post-secondary programs. 
+                        It also gives our community a better chance to see where the funds are being spent.
+                    </p>
+    
+                    <p class="mainTextPadding mainText">
+                        Although we are moving in the right direction, Soowahlie needs to keep working on its relationship with the schools that our youth go to. 
+                        There are some stories of a disconnect between the school and the students, Soowahlie parents, 
+                        Chief and Council, and the education worker can all work together to make the best possible scenario for the students.
+                    </p>
+                </div>
+            </div>
         </div>
 
-        <div class="mainHeight white" id="adminPWM">
-            Public Works / Maintenance
+        <div class="mainTextPadding smallSidePadding smallTBPadding mainHeight blue notoSerif whiteText" id="adminEM">
+            <h2 class="mainHeader underline">
+                Housing
+                <span id="" class="anchor"></span>
+            </h2>
+
+            <div class="flex mobileColumn desktopRow">
+                <!-- <div class="fortyWidth">
+                    <img src="" alt="" class="responsiveImage imagePadding vertCenter">
+                </div> -->
+
+                <div class="notoSerif whiteText sixtyWidth">
+                    <p class="mainTextPadding mainText">
+                        Housing is one of the most sensitive topics to talk about in Soowahlie. 
+                        Every single house built on Soowahlie has a different story to it. 
+                        Many of the houses on Soowahlie need renovations. During the construction of houses, 
+                        many companies took advantage of First Nations across Canada by building houses that were not up to code. 
+                        The companies took many shortcuts to save themselves money while still getting paid for the work. 
+                        House inspectors need to be used if we are going to be building new houses so that we don't get scammed by construction companies.
+                    </p>
+    
+                    <p class="mainTextPadding mainText">
+                        There is a limited amount of Housing available to Soowahlie members because the amount of arrears owed doesn't allow us to explore more housing and future options. 
+                        Some of the arrears owed to Soowahlie are more than likely never going to be paid back. 
+                        It is a very unfortunate situation for young members who are looking into getting a house or other members who want to move back home to Soowahlie. 
+                        Members want to be able to live on this beautiful land near their families and it is a shame that because of other community members, they can't. 
+                        One of our main goals is to be able to have community members move home.
+                    </p>
+                </div>
+            </div>
         </div>
 
-        <div class="mainHeight blue" id="adminSA">
-            Social Assistance
+        <div class="mainTextPadding smallSidePadding smallTBPadding mainHeight midnight notoSerif whiteText" id="adminEM">
+            <h2 class="mainHeader underline">
+                Public Works / Maintenance
+                <span id="" class="anchor"></span>
+            </h2>
+
+            <div class="flex mobileColumn desktopRow">
+                <!-- <div class="fortyWidth">
+                    <img src="" alt="" class="responsiveImage imagePadding vertCenter">
+                </div> -->
+
+                <div class="notoSerif whiteText sixtyWidth">
+                    <p class="mainTextPadding mainText">
+                        Reports To: Chief and Council and Band Manager. 
+                        The Maintenance Manager is responsible for overseeing the basic repairs and maintenance of the Social Housing; 
+                        Capital Housing, Community buildings and Water programs as outlined by the 
+                        Community Infrastructure from Indian and Northern Affairs Canada (INAC) and Canada Mortgage and Housing Corporation (CMHC).
+                    </p> 
+    
+    
+                    <h3 class="mainSubHeader">Duties and Responsibilities:</h3>
+
+                    <ul class="mainText mainTextMargin bulletList">
+                        <li>
+                            Experience in all aspects of maintenance, yard work, and basic construction.  
+                        </li>
+
+                        <li>
+                            Provide reports and project completion reports as required.  
+                        </li>
+
+                        <li>
+                            Know the housing programs: Social Housing, Capital Housing, Individual Housing, Renovations, New Construction, RRAP.  
+                        </li>
+
+                        <li>
+                            Responsible for minor repairs and have resources for major repairs to include three quotes.  
+                        </li>
+
+                        <li>
+                            Organize and assist with house inspection with Housing Committee representatives.  
+                        </li>
+
+                        <li>
+                            Liaise between Housing Administration and/or homeowner and contractor.  
+                        </li>
+
+                        <li>
+                            Ensure timely completion of all components of the housing and building maintenance.  
+                        </li>
+
+                        <li>
+                            Liaison and arrange training sessions with CMHC and INAC contacts.  
+                        </li>
+
+                        <li>
+                            Maintain an efficient and accurate filing system.  
+                        </li>
+
+                        <li>
+                            Conduct all other relevant duties as requested by the Council or Band Manager.  
+                        </li>
+                    </ul>
+                    
+                    <h3 class="mainSubHeader">
+                        The Maintenance worker is responsible for providing general maintenance service for the community areas:
+                    </h3>
+
+                    <ul class="mainText mainTextMargin bulletList">
+                        <li>
+                            Community Buildings
+                        </li>
+
+                        <li>
+                            Water systems
+                        </li>
+
+                        <li>
+                            Sewer Systems
+                        </li>
+
+                        <li>
+                            Roads
+                        </li>
+
+                        <li>
+                            Drainage
+                        </li>
+
+                        <li>
+                            Sanitation Systems (garbage)
+                        </li>
+
+                        <li>
+                            Utilities
+                        </li>
+
+                        <li>
+                            Machinery, Equipment, Vehcles and Tools
+                        </li>
+
+                        <li>
+                            Maintenance of Soowahlie Park Areas, Playgrounds, Office Areas and Cemetery and Elder's yards (if requested)
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </div>
 
-        <div class="contactHeight contactTab textShadowB">
-            <div class="contactSections">
+        <div class="mainTextPadding smallSidePadding smallTBPadding mainHeight blue notoSerif whiteText" id="adminEM">
+            <h2 class="mainHeader underline">
+                Social Assistance
+                <span id="" class="anchor"></span>
+            </h2>
+
+            <div class="flex mobileColumn desktopRow">
+                <!-- <div class="fortyWidth">
+                    <img src="" alt="" class="responsiveImage imagePadding vertCenter">
+                </div> -->
+
+                <div class="notoSerif whiteText sixtyWidth">
+                    <p class="mainTextPadding mainText">
+                        The Social Development Program helps cover daily living costs and access pre-employment supports. 
+                        This program is a last resort for eligible individuals and their families.
+                    </p>
+    
+                    <p class="mainTextPadding mainText">
+                        Applicants must be:
+                    </p>
+
+                    <ul class="mainText mainTextMargin bulletList">
+                        <li>
+                            Ordinarily resident on reserve
+                        </li>
+    
+                        <li>
+                            19 years or older
+                        </li>
+    
+                        <li>
+                            Be eligible for basic or special financial assistance
+                        </li>
+    
+                        <li>
+                            Show that they have no other source of funding to meet basic needs
+                        </li>
+                    </ul>
+
+                    <p class="mainTextPadding mainText">
+                        If applying for Income Assistance, applicants will be assessed according to the criteria of the province. 
+                        This assessment covers:
+                    </p>
+
+                    <ul class="mainText mainTextMargin bulletList">
+                        <li>
+                            Financial need
+                        </li>
+    
+                        <li>
+                            Employability
+                        </li>
+    
+                        <li>
+                            Family composition and age
+                        </li>
+    
+                        <li>
+                            Available financial resources in the household
+                        </li>
+                    </ul>
+
+                    <p class="mainTextPadding italic smallText">
+                        To apply, contact the Band Social Development Worker to set up an appointment.
+                    </p>
+
+                    <p class="mainTextPadding mainText">
+                        Indian and Northern Affairs Canada (INAC) develops policies and delivers social development programs to the First Nations on reserve. 
+                        In an effort to address social conditions on reserve, over the years INAC has established programs. 
+                        The INAC Social Development provides eligible recipients with the means to meet basic needs for food, clothing and shelter. 
+                        The Income Assistance Program called Basic Needs is available to all on-reserve residents and their dependents who meet eligibility criteria, 
+                        as defined by the province or territory of residence, and who are in need of basic or special financial assistance.
+                    </p>
+    
+                    <p class="mainTextPadding mainText">
+                        Soowahlie has recently started to run our own Social Development program. 
+                        Our Social Development worker can closely monitor the people who are on social assistance. 
+                        The Social Development worker should be someone who is not from Soowahlie so that they can do the job without the extra pressure of working with family members. 
+                        Confidentiality is also very important when dealing with social assistance, personal information is kept between the client and the worker.
+                    </p>
+    
+                    <p class="mainTextPadding mainText">
+                        Soowahlie also works with Stolo Aboriginal Skills and Employment Training (SASET) to help community members.
+                        SASET can help our members write résumés so they can go out and apply for jobs. 
+                        SASET also help community members develop action plans to either get them onto the right training or to the correct career path for them.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="smallTBPadding flex centerTA spaceBetween footerContacts whiteText textShadowB">
+            <div class="smallSidePadding footerContactInfo footerLeft">
                 <h3>
                     Band Office
                 </h3>
@@ -181,7 +744,7 @@
                 </p>
             </div>
 
-            <div class="contactSections">
+            <div class="smallSidePadding footerContactInfo footerRight">
                 <h3>
                     Health Office
                 </h3>
@@ -197,17 +760,17 @@
                 </p>
             </div>
         </div>
-        
-    </main>
 
-    <footer>
-        <p class="footerLeft">
-            Soowahlie First Nation © 2022 All Rights Reserved
-        </p>
 
-        <p class="footerRight">
-            Designed and Maintained by Band Member Joel Kelly
-        </p>
+        <div class="smallSidePadding centerTA spaceBetween whiteText flex copyright">
+            <p class="footerLeft">
+                Soowahlie First Nation © 2022 All Rights Reserved
+            </p>
+    
+            <p class="footerRight">
+                Designed and Maintained by Band Member Joel Kelly
+            </p>
+        </div>
     </footer>
 </body>
 
